@@ -10,46 +10,55 @@
     overflow: hidden;
     margin-top: 0.5rem;
     padding-top: 1.5rem;
-    
+    padding: 0.1rem;
 
     .widget {
       position: relative;
       cursor: pointer;
-
       display: flex;
       flex-direction: column;
       align-items: center;
-
       padding: 0.75rem;
       margin-right: 0.75rem;
-
-      min-width: 115px;
-
+      min-width: 10.1rem;
       border: 1px solid var(--secondary-text-color);
       border-radius: 1rem;
+      background-color: var(--main-bg-color);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        background-color: var(--hover-bg-color);
+        transform: scale(1.02); 
+      }
 
       .day {
         position: absolute;
         top: -1.5rem;
       }
+
       .icon-temp {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 0.75rem 0;
+
         img {
-          width: 40px;
+          width: 45px; // Slightly larger for better visibility
           margin-right: 0.25rem;
         }
       }
+
       .wind {
         margin-top: 0.25rem;
         display: flex;
+
         .speed {
           margin-right: 0.25rem;
         }
+
         .wind-dir {
-          font-size: 0.8rem;
+          font-size: 0.9rem; // Improved readability
           margin-left: 0.25rem;
         }
       }
